@@ -1,3 +1,13 @@
+/**
+ * @requires ARC_LOGGING_WEB_INSTANCE
+ * @requires ARC_LOGGING_WEB_CLIENT
+ * @requires ARC_LOGGING_WEB_URL
+ * @requires ARC_LOGGING_WEB_PROTOCOL
+ * @requires ARC_LOGGING_WEB_PORT
+ * 
+ * @type module
+ */
+
 "use strict";
 
 var process = require('process');
