@@ -1,0 +1,17 @@
+{
+  "name": "logging-io-node-client",
+  "version": "1.0.0",
+  "description": "Node.js client logging module for logging-io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:binarypursuits/logging-io-node-client.git"
+  },
+  "author": "Brian Bolli <brian.bolli@arct.com>",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/4atg/arc-logging-client#readme",
+  "dependencies": {}
+}
