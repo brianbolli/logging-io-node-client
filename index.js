@@ -22,8 +22,6 @@ var logging = {
 	language: "Node"
 };
 
-console.log('Logging Access Credentiasl -> ', logging);
-
 var sendLogEvent = function (type, source, message, user_id, data)
 {
 	if (!logging.client || !logging.instance || !logging.url || !logging.protocol)
