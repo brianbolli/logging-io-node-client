@@ -12,14 +12,18 @@
 
 var process = require('process');
 var http = require('http');
+var language = "Node";
 
 var logging = {
 	instance: process.env['ARC_LOGGING_WEB_INSTANCE'] || false,
 	client: process.env['ARC_LOGGING_WEB_CLIENT'] || false,
-	url: process.env['ARC_LOGGING_WEB_URL'] || false,
+	//url: process.env['ARC_LOGGING_WEB_URL'] || false,
+	url: "arc-logging.azurewebsites.net",
 	protocol: process.env['ARC_LOGGING_WEB_PROTOCOL'] || false,
 	port: process.env['ARC_LOGGING_WEB_PORT'] || false
 };
+
+console.log('Logging Access Credentiasl -> ', logging);
 
 var sendLogEvent = function (type, source, message, user_id, data)
 {
@@ -37,7 +41,7 @@ var sendLogEvent = function (type, source, message, user_id, data)
 		"data": data || {},
 		"user_id": user_id || 0,
 		"msg": message,
-		"language": "Node"
+		"language": language
 	});
 	
 	var options = {
@@ -120,4 +124,12 @@ exports.warning = function (source, message, user_id, data) {
  */
 exports.error = function (source, message, user_id, data) {
 	sendLogEvent('error', source, message, user_id, data);
+};
+
+exports.setLanguage = function(_language) {
+	language = _language;
+};
+
+exports.setInstance = function(_instance) {
+	logging.instance = _instance;
 };
