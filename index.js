@@ -123,10 +123,30 @@ exports.error = function (source, message, user_id, data) {
 	sendLogEvent('error', source, message, user_id, data);
 };
 
+/**
+ * setLanguage
+ * 
+ * Method to manually change source programming
+ * language from default 'node' value.
+ * 
+ * @param    {string} language
+ * 
+ * @returns  {void}
+ */
 exports.setLanguage = function(language) {
 	logging.language = language;
 };
 
+/**
+ * setInstance
+ * 
+ * Method to manually change server instance
+ * from default environmental variable.
+ * 
+ * @param    {string} language
+ * 
+ * @returns  {void}
+ */
 exports.setInstance = function(instance) {
 	logging.instance = instance;
 };
