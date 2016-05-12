@@ -10,6 +10,17 @@ Custom client for Arc Technology Group application logging.
 npm install --save github:brianbolli/logging-io-node-client
 ```
 
+#### <i class="icon-file"></i> Environmental Variables
+
+When developing locally and using the logging client, the below environmental
+variables must be set.
+
+ARC_LOGGING_WEB_INSTANCE
+ARC_LOGGING_WEB_CLIENT
+ARC_LOGGING_WEB_URL
+ARC_LOGGING_WEB_PROTOCOL
+ARC_LOGGING_WEB_PORT
+
 #### <i class="icon-folder-open"></i> Usage
 ```
 var arc = require('../index');
