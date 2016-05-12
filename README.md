@@ -15,20 +15,20 @@ npm install --save github:brianbolli/logging-io-node-client
 When developing locally and using the logging client, the below environmental
 variables must be set.
 
-ARC_LOGGING_WEB_INSTANCE
+ARC_LOGGING_WEB_INSTANCE - Instance of website submitting logs, i.e. production, development, localhost
 
-ARC_LOGGING_WEB_CLIENT
+ARC_LOGGING_WEB_CLIENT - Owner of application submitting logs, i.e hilco, lifestorage, arc
 
-ARC_LOGGING_WEB_URL
+ARC_LOGGING_WEB_URL - Host name for logging.io server, i.e. my-logging.my-website.com
 
-ARC_LOGGING_WEB_PROTOCOL
+ARC_LOGGING_WEB_PROTOCOL - Protocol to use when submitting logs, i.e. http or https
 
-ARC_LOGGING_WEB_PORT
+ARC_LOGGING_WEB_PORT - Port to use when submitting logs, i.e. 80
 
 
 #### <i class="icon-folder-open"></i> Usage
 ```
-var arc = require('../index');
+var arc = require('logging-io-node-client');
 
 arc.info("Arc Logging Client", "This is a info test 3, how did I do?", false, {foo: "bar"});
 
@@ -49,11 +49,11 @@ Private method to send log event
 
 ### Params:
 
-* **string** *type* 
-* **string** *source* 
-* **string** *message* 
-* **string** *user_id* 
-* **object** *data* 
+* **string** *type* - Type of log event to submit (error, warning, info)
+* **string** *source* - Source of log request, i.e. Hilco AD API - User Service
+* **string** *message* - Actual log message to submit
+* **string** *user_id* - For if a user is logged in when error occured
+* **mixed.\<array|object>** *data* - Any relevant data you would like to submit and view with logs
 
 ### Return:
 
@@ -65,10 +65,10 @@ Method to submit an info log entry
 
 ### Params:
 
-* **string** *source* 
-* **string** *message* 
-* **integer** *user_id* 
-* **mixed.\<array|object>** *data* 
+* **string** *source* - Source of log request, i.e. Hilco AD API - User Service
+* **string** *message* - Actual log message to submit
+* **integer** *user_id* - For if a user is logged in when error occured
+* **mixed.\<array|object>** *data* - Any relevant data you would like to submit and view with logs
 
 ## warning(source, message, user_id, data)
 
@@ -76,10 +76,10 @@ Method to submit a warning log entry
 
 ### Params:
 
-* **string** *source* 
-* **string** *message* 
-* **integer** *user_id* 
-* **mixed.\<array|object>** *data* 
+* **string** *source* - Source of log request, i.e. Hilco AD API - User Service
+* **string** *message* - Actual log message to submit
+* **integer** *user_id* - For if a user is logged in when error occured
+* **mixed.\<array|object>** *data* - Any relevant data you would like to submit and view with logs
 
 ## error(source, message, user_id, data)
 
@@ -87,30 +87,25 @@ Method to submit an error log entry
 
 ### Params:
 
-* **string** *source* 
-* **string** *message* 
-* **integer** *user_id* 
-* **mixed.\<array|object>** *data* 
+* **string** *source* - Source of log request, i.e. Hilco AD API - User Service
+* **string** *message* - Actual log message to submit
+* **integer** *user_id* - For if a user is logged in when error occured
+* **mixed.\<array|object>** *data* - Any relevant data you would like to submit and view with logs
 
 ## setLanguage(language)
 
-Method to manually change source programming
+Utility method to manually change source programming
 language from default 'node' value.
 
 ### Params:
 
-* **string** *language* 
+* **string** *language* - Override value for language
 
-## setInstance(language)
+## setInstance(instance)
 
 Method to manually change server instance
 from default environmental variable.
 
 ### Params:
 
-* **string** *language* 
-
-
-<!-- End index.js -->
-
-
+* **string** *instance* - Override value for instance

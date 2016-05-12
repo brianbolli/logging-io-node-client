@@ -27,11 +27,11 @@ var logging = {
  * @method  sendLogEvent
  * @private
  * 
- * @param {string} type
- * @param {string} source
- * @param {string} message
- * @param {string} user_id
- * @param {object} data
+ * @param {string} type - Type of log event to submit (error, warning, info)
+ * @param {string} source - Source of log request, i.e. Hilco AD API - User Service
+ * @param {string} message - Actual log message to submit
+ * @param {string} user_id - For if a user is logged in when error occured
+ * @param {mixed<array|object>} data - Any relevant data you would like to submit and view with logs
  * 
  * @returns {void}
  */
@@ -93,12 +93,11 @@ var sendLogEvent = function (type, source, message, user_id, data)
  * 
  * @method info
  * 
- * @param {string} source
- * @param {string} message
- * @param {integer} user_id
- * @param {mixed<array|object>} data
+ * @param {string} source - Source of log request, i.e. Hilco AD API - User Service
+ * @param {string} message - Actual log message to submit
+ * @param {integer} user_id - For if a user is logged in when error occured
+ * @param {mixed<array|object>} data - Any relevant data you would like to submit and view with logs
  * 
- * @returns {void}
  */
 exports.info = function (source, message, user_id, data) {
 	sendLogEvent('info', source, message, user_id, data);
@@ -109,12 +108,11 @@ exports.info = function (source, message, user_id, data) {
  * 
  * @method warning
  * 
- * @param {string} source
- * @param {string} message
- * @param {integer} user_id
- * @param {mixed<array|object>} data
+ * @param {string} source - Source of log request, i.e. Hilco AD API - User Service
+ * @param {string} message - Actual log message to submit
+ * @param {integer} user_id - For if a user is logged in when error occured
+ * @param {mixed<array|object>} data - Any relevant data you would like to submit and view with logs
  * 
- * @returns {void}
  */
 exports.warning = function (source, message, user_id, data) {
 	sendLogEvent('warning', source, message, user_id, data);
@@ -125,26 +123,24 @@ exports.warning = function (source, message, user_id, data) {
  * 
  * @method error
  * 
- * @param {string} source
- * @param {string} message
- * @param {integer} user_id
- * @param {mixed<array|object>} data
- * 
- * @returns {void}
+ * @param {string} source - Source of log request, i.e. Hilco AD API - User Service
+ * @param {string} message - Actual log message to submit
+ * @param {integer} user_id - For if a user is logged in when error occured
+ * @param {mixed<array|object>} data - Any relevant data you would like to submit and view with logs
+ *
  */
 exports.error = function (source, message, user_id, data) {
 	sendLogEvent('error', source, message, user_id, data);
 };
 
 /**
- * Method to manually change source programming
+ * Utility method to manually change source programming
  * language from default 'node' value.
  * 
  * @method setLanguage
  * 
- * @param    {string} language
+ * @param  {string} language - Override value for language
  * 
- * @returns  {void}
  */
 exports.setLanguage = function(language) {
 	logging.language = language;
@@ -156,9 +152,8 @@ exports.setLanguage = function(language) {
  * 
  * @method setInstance
  * 
- * @param    {string} language
+ * @param  {string} instance - Override value for instance
  * 
- * @returns  {void}
  */
 exports.setInstance = function(instance) {
 	logging.instance = instance;
