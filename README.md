@@ -16,10 +16,15 @@ When developing locally and using the logging client, the below environmental
 variables must be set.
 
 ARC_LOGGING_WEB_INSTANCE
+
 ARC_LOGGING_WEB_CLIENT
+
 ARC_LOGGING_WEB_URL
+
 ARC_LOGGING_WEB_PROTOCOL
+
 ARC_LOGGING_WEB_PORT
+
 
 #### <i class="icon-folder-open"></i> Usage
 ```
@@ -65,10 +70,6 @@ Method to submit an info log entry
 * **integer** *user_id* 
 * **mixed.\<array|object>** *data* 
 
-### Return:
-
-* 
-
 ## warning(source, message, user_id, data)
 
 Method to submit a warning log entry
@@ -79,10 +80,6 @@ Method to submit a warning log entry
 * **string** *message* 
 * **integer** *user_id* 
 * **mixed.\<array|object>** *data* 
-
-### Return:
-
-* 
 
 ## error(source, message, user_id, data)
 
@@ -95,10 +92,6 @@ Method to submit an error log entry
 * **integer** *user_id* 
 * **mixed.\<array|object>** *data* 
 
-### Return:
-
-* 
-
 ## setLanguage(language)
 
 Method to manually change source programming
@@ -107,10 +100,6 @@ language from default 'node' value.
 ### Params:
 
 * **string** *language* 
-
-### Return:
-
-* 
 
 ## setInstance(language)
 
@@ -121,9 +110,6 @@ from default environmental variable.
 
 * **string** *language* 
 
-### Return:
-
-* 
 
 <!-- End index.js -->
 
