@@ -1,11 +1,10 @@
 /**
- * @requires ARC_LOGGING_WEB_INSTANCE
- * @requires ARC_LOGGING_WEB_CLIENT
- * @requires ARC_LOGGING_WEB_URL
- * @requires ARC_LOGGING_WEB_PROTOCOL
- * @requires ARC_LOGGING_WEB_PORT
+ * Custom Logging.io client for Arc Technology Group
  * 
+ * @class logging-io-node-client
  * @type module
+ * 
+ * @since  3.0.0
  */
 
 "use strict";
@@ -22,11 +21,25 @@ var logging = {
 	language: "Node"
 };
 
+/**
+ * Private method to send log event
+ * 
+ * @method  sendLogEvent
+ * @private
+ * 
+ * @param {string} type
+ * @param {string} source
+ * @param {string} message
+ * @param {string} user_id
+ * @param {object} data
+ * 
+ * @returns {void}
+ */
 var sendLogEvent = function (type, source, message, user_id, data)
 {
 	if (!logging.client || !logging.instance || !logging.url || !logging.protocol)
 	{
-		console.error('Missinng required environmental variable');
+		console.error('Missing required environmental variable');
 		return false;
 	}
 	
@@ -61,7 +74,7 @@ var sendLogEvent = function (type, source, message, user_id, data)
 		});
 		
 		res.on('end', function() {
-			//console.log(buffer);
+			console.log(buffer);
 		});
 		
 	});
@@ -76,9 +89,9 @@ var sendLogEvent = function (type, source, message, user_id, data)
 };
 
 /**
- * info
- * 
  * Method to submit an info log entry
+ * 
+ * @method info
  * 
  * @param {string} source
  * @param {string} message
@@ -92,9 +105,9 @@ exports.info = function (source, message, user_id, data) {
 };
 
 /**
- * warning
- * 
  * Method to submit a warning log entry
+ * 
+ * @method warning
  * 
  * @param {string} source
  * @param {string} message
@@ -108,9 +121,9 @@ exports.warning = function (source, message, user_id, data) {
 };
 
 /**
- * error
- * 
  * Method to submit an error log entry
+ * 
+ * @method error
  * 
  * @param {string} source
  * @param {string} message
@@ -124,10 +137,10 @@ exports.error = function (source, message, user_id, data) {
 };
 
 /**
- * setLanguage
- * 
  * Method to manually change source programming
  * language from default 'node' value.
+ * 
+ * @method setLanguage
  * 
  * @param    {string} language
  * 
@@ -138,10 +151,10 @@ exports.setLanguage = function(language) {
 };
 
 /**
- * setInstance
- * 
  * Method to manually change server instance
  * from default environmental variable.
+ * 
+ * @method setInstance
  * 
  * @param    {string} language
  * 

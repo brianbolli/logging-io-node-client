@@ -1,0 +1,246 @@
+{
+    "project": {
+        "name": "<json:package.json>",
+        "description": "<json:package.json>",
+        "version": "<json:package.json>",
+        "url": "https://www.arctg.com"
+    },
+    "files": {
+        "index.js": {
+            "name": "index.js",
+            "modules": {},
+            "classes": {
+                "logging-io-node-client": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "logging-io-node-client": {
+            "name": "logging-io-node-client",
+            "shortname": "logging-io-node-client",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "index.js",
+            "line": 1,
+            "description": "Custom Logging.io client for Arc Technology Group",
+            "type": "module",
+            "since": "3.0.0"
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "index.js",
+            "line": 24,
+            "description": "Private method to send log event",
+            "itemtype": "method",
+            "name": "sendLogEvent",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "source",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "message",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "user_id",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "data",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "logging-io-node-client"
+        },
+        {
+            "file": "index.js",
+            "line": 91,
+            "description": "Method to submit an info log entry",
+            "itemtype": "method",
+            "name": "info",
+            "params": [
+                {
+                    "name": "source",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "message",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "user_id",
+                    "description": "",
+                    "type": "Integer"
+                },
+                {
+                    "name": "data",
+                    "description": "",
+                    "type": "Mixed<array|object>"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "logging-io-node-client"
+        },
+        {
+            "file": "index.js",
+            "line": 107,
+            "description": "Method to submit a warning log entry",
+            "itemtype": "method",
+            "name": "warning",
+            "params": [
+                {
+                    "name": "source",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "message",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "user_id",
+                    "description": "",
+                    "type": "Integer"
+                },
+                {
+                    "name": "data",
+                    "description": "",
+                    "type": "Mixed<array|object>"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "logging-io-node-client"
+        },
+        {
+            "file": "index.js",
+            "line": 123,
+            "description": "Method to submit an error log entry",
+            "itemtype": "method",
+            "name": "error",
+            "params": [
+                {
+                    "name": "source",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "message",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "user_id",
+                    "description": "",
+                    "type": "Integer"
+                },
+                {
+                    "name": "data",
+                    "description": "",
+                    "type": "Mixed<array|object>"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "logging-io-node-client"
+        },
+        {
+            "file": "index.js",
+            "line": 139,
+            "description": "Method to manually change source programming\nlanguage from default 'node' value.",
+            "itemtype": "method",
+            "name": "setLanguage",
+            "params": [
+                {
+                    "name": "language",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "logging-io-node-client"
+        },
+        {
+            "file": "index.js",
+            "line": 153,
+            "description": "Method to manually change server instance\nfrom default environmental variable.",
+            "itemtype": "method",
+            "name": "setInstance",
+            "params": [
+                {
+                    "name": "language",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "logging-io-node-client"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " index.js:24"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " index.js:91"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " index.js:107"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " index.js:123"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " index.js:139"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " index.js:153"
+        }
+    ]
+}
